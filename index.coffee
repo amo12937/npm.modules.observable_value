@@ -2,7 +2,7 @@
 
 SimplePublisher = require "amo.modules.simple_publisher"
 
-module.exports = class ObservableObject extends SimplePublisher
+module.exports = class ObservableValue extends SimplePublisher
   constructor: (props = {}) ->
     super()
     @addProperties props
