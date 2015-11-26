@@ -1,6 +1,7 @@
 "use strict"
 
 SimplePublisher = require "amo.modules.simple_publisher"
+forbiddenProps = ["addProperty", "addProperties", "register", "publish"]
 
 module.exports = class ObservableValue extends SimplePublisher
   constructor: (props = {}) ->
@@ -8,7 +9,7 @@ module.exports = class ObservableValue extends SimplePublisher
     @addProperties props
 
   addProperty: (key, val) ->
-    return if @hasOwnProperty key
+    return @ if @hasOwnProperty(key) or  key in forbiddenProps
     self = @
     descriptor =
       configurable: false
