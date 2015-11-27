@@ -1,6 +1,6 @@
 {
   "name": "amo.modules.observable_value",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.coffee",
   "scripts": {
@@ -20,6 +20,6 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "amo.modules.simple_publisher": "^1.0.2"
+    "amo.modules.simple_publisher": "^1.1.0"
   }
 }
