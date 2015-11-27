@@ -1,9 +1,10 @@
 {
   "name": "amo.modules.observable_value",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
-  "main": "index.coffee",
+  "main": "index.js",
   "scripts": {
+    "prepublish": "coffee -c index.coffee",
     "test": "env NODE_PATH=. mocha --compilers coffee:coffee-script/register --recursive spec/ -R dot"
   },
   "repository": {
@@ -20,6 +21,6 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "amo.modules.simple_publisher": "^1.1.0"
+    "amo.modules.simple_publisher": "^1.1.1"
   }
 }
