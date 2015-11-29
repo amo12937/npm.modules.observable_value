@@ -16,6 +16,7 @@ module.exports = class ObservableValue extends SimplePublisher
       enumerable: true
       get: -> val
       set: (newVal) ->
+        return if val is newVal
         old = val
         val = newVal
         self.publish key, old, val

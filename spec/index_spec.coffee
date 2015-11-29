@@ -44,6 +44,16 @@ describe "ObservableValue", ->
         obj.addProperty "hoge", old
         obj.hoge = newVal
 
+      it "a property it adds should not publish when its value is not changed", ->
+        old = 10
+        newVal = 10
+        counter = 0
+        listener = ->
+          counter += 1
+        obj.register "hoge", listener
+        obj.addProperty "hoge", old
+        expect(counter).to.equal 0
+
     describe "addProperties", ->
       it "should call addProperty", ->
         spy = sinon.spy obj, "addProperty"
